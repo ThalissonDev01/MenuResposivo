@@ -3,9 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Responsivo</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link flex href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <title>SideBar Responsivo</title>
 </head>
 <body>
-    
+    <nav class="sidebar locked">
+        <div class="logo-items flex">
+            <span class="nav-image">
+                <img src="img/28267842_7-Photoroom.png-Photoroom.png" alt="logo">
+            </span>
+            <span class="logo-name">Colorful Bird</span>
+            <i class="bx bx-lock-alt" id="lock-icon" title="unlock Sidebar"></i>
+            <i class="bx bx-x" id="Sidebar-close"></i>
+        </div>
+
+        <div class="menu-container">
+            <div class="menu-items">
+                <ul class="menu-item">
+                    <div class="menu-title flex">
+                        <span class="title">Dashboard</span>
+                        <span class="line"></span>
+                    </div>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-home-alt"></i>
+                            <span>Overview</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-grid-alt"></i>
+                            <span>All Projects</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu-item">
+                    <div class="menu-title flex">
+                        <span class="title">Editor</span>
+                        <span class="line"></span>
+                    </div>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bxs-magic-wand"></i>
+                            <span>Magic Build</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-folder"></i>
+                            <span>New Projects</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-cloud-upload"></i>
+                            <span>Upload New</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="menu-item">
+                    <div class="menu-title flex">
+                        <span class="title">Setting</span>
+                        <span class="line"></span>
+                    </div>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-flag"></i>
+                            <span>Notice Board</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-award"></i>
+                            <span>Award</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#" class="link flex">
+                            <i class="bx bx-cog"></i>
+                            <span>Setting</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="siderbar-profile flex">
+                <span class="nav-image">
+                    <img src="img/perfil.png" alt="logo-img">
+                </span>
+                <div class="data-text">
+                    <span class="name">Thalisson</span>
+                    <span class="email">thalisson@gmail.com</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- NavBar -->
+    <nav class="navbar flex">
+        <i class="bx bx-menu" id="sidebar-open"></i>
+        <input type="text" placeholder="Search..." class="search-box">
+        <span class="nav-image">
+            <img src="img/perfil.png" alt="logo-img">
+        </span>
+    </nav>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
