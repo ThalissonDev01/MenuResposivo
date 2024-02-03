@@ -19,11 +19,18 @@ body {
     align-items: center;
 }
 
+.nav-image {
+    display: flex;
+    min-width: 55px;
+    justify-content: center;
+}
+
 .nav-image img {
     height: 40px;
     width: 40px;
     border-radius: 50%;
-    object-fit: cover; /* Pesquisa*/
+    object-fit: cover;
+    /* Pesquisa*/
 }
 
 /* SIDEBAR */
@@ -37,6 +44,11 @@ body {
     background: #fff;
     padding: 15px 10px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    transform: all 0.4s ease;
+}
+
+.sidebar.close {
+    width: calc(55px + 20px);
 }
 
 .logo-items {
@@ -47,17 +59,26 @@ body {
     font-size: 22px;
     color: #333;
     font-weight: 500px;
+    transition: all 0.3s ease;
+}
+
+.sidebar.close .logo-name,
+.sidebar.close #lock-icon,
+.sidebar.close #sidebar-close {
+    opacity: 0;
+    pointer-events: none;
 }
 
 #lock-icon,
-#Sidebar-close {
+#sidebar-close {
     padding: 10px;
     color: #4949d7;
     font-size: 25px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-#Sidebar-close {
+#sidebar-close {
     display: none;
     color: #333;
 }
@@ -80,6 +101,11 @@ body {
 
 .menu-title .title {
     margin-left: 15px;
+    transition: all 0.3s ease;
+}
+
+.sidebar.close .title {
+    opacity: 0;
 }
 
 .menu-title .line {
@@ -90,10 +116,15 @@ body {
     width: 15px;
     border-radius: 25px;
     background: #aaa;
+    transition: all 0.3s ease;
 }
 
 .menu-title .line {
     opacity: 0;
+}
+
+.sidebar.close .line {
+    opacity: 1;
 }
 
 .item {
@@ -113,7 +144,8 @@ body {
 }
 
 .link span {
-    white-space: nowrap; /* Pesquisa*/
+    white-space: nowrap;
+    /* Pesquisa*/
 }
 
 .link i {
@@ -163,6 +195,7 @@ body {
     color: #333;
     cursor: pointer;
     margin-right: 20px;
+    display: none;
 }
 
 .search-box {
@@ -192,9 +225,31 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+
+    .sidebar {
+        left: 0;
+        z-index: 1000;
+    }
+
+    .sidebar.close {
+        left: -100%;
+    }
+
+    #sidebar-close {
+        display: block;
+    }
+
+    #lock-icon {
+        display: none;
+    }
+
     .navbar {
         left: 0;
         max-width: 100%;
         transform: translateX(0%);
+    }
+
+    #sidebar-open {
+        display: block;
     }
 }
